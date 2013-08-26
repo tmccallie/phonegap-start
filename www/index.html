@@ -23,7 +23,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Trey's App</title>
     </head>
     <body>
         <div class="app">
@@ -32,9 +32,33 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+
+            <div ng-app class="treyapp">
+                <div ng-controller="TreyCtrl">
+                    <form ng-submit="doSomething()" class="trey">
+
+                        <fieldset>
+                            <legend>Legend</legend>
+                            <label for="">asdf</label>
+                            <input type="text" ng-model="foo" placeholder="blah">
+                            <input class="btn-primary" type="submit" value="go">
+                        </fieldset>
+
+                    </form>
+                    <div>
+                        <dl>
+                            <dt>Output</dt>
+                            <dd>{{bar}}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
+
+        <!--<script type="text/javascript" src="phonegap.js"></script>-->
+        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
